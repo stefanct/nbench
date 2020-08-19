@@ -1,0 +1,13 @@
+*.o
+*~
+a.out
+build
+core
+debugbit.dat
+hardware
+hello
+nbench
+pointer
+pointer.h
+sysinfo.c
+sysinfoc.c
