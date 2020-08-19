@@ -40,6 +40,7 @@ static void removeNewLine(char * s) {
 ** The pointer result must point to a pre-allocated array of at least BUF_SIZ
 */
 static void runCommand (const char *command, char *result) {
+#ifndef NO_UNAME
   FILE * pipe;
 
   pipe = popen(command, "r");
@@ -54,6 +55,7 @@ static void runCommand (const char *command, char *result) {
     pclose(pipe);
   }
   removeNewLine(result);
+#endif // NO_UNAME
 }
 
 

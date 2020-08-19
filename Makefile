@@ -120,6 +120,7 @@ emfloat.o: emfloat.h emfloat.c nmglobal.h pointer.h Makefile
 		-c emfloat.c
 
 pointer.h: pointer Makefile
+	$(warning This will break on cross-compilation)
 	$(CC) $(MACHINE) $(DEFINES) $(CFLAGS)\
 		-o pointer pointer.c
 	rm -f pointer.h
